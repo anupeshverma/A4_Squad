@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Numito+Sans:wght@200&display=swap');
-/* 
-light
-*/
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
 :root {
     --font-style: 'Nunito Sans', sans-serif;
     --light_color: #cbbddb;
@@ -16,22 +15,75 @@ light
 body {
     background: #131315;
     font-family: var(--font-style);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
+
+/* <-------NAV-----------> */
+.navigation {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(51, 18, 68, 0.9);
+
+}
+.login-btn{
+    float: right;
+    text-decoration: none;
+    padding-right: 2%;
+    color: #fff;
+    font-family: Arial;
+    font-weight: 900;
+}
+.login-btn:hover{
+    color: var(--mid_color);
+    text-shadow: #242026;
+}
+
+.navbar-right {
+    float: right;
+    padding-right: 5%;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    font-family: Arial;
+    font-weight: 900;
+}
+
+
+.navbar-right a:hover {
+    text-decoration: underline;
+}
+
+.navbar-logo {
+    padding-left: 5%;
+    font-family: "Creepster", cursive;
+    font-size: 4vw;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* <-----------MAIN-------------> */
 .login_box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
+    position: relative;
     padding: 40px;
-    transform: translate(-50%, -50%);
+    margin: 130px 50px 20px 50px;
     background-color: var(--dark_color);
     box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
     border-radius: 10px;
 }
 
 .login_box h2 {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     padding: 0;
     color: #fff;
     text-align: center;
@@ -40,8 +92,9 @@ body {
 .login_box .profile {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     color: #fff;
-    margin: 20px 20px 40px 40px;
+    margin: 0px 10px 20px 20px;
 
 }
 
@@ -72,7 +125,6 @@ option{
 .login_box .user_box input {
     position: relative;
     width: 100%;
-    padding: 10px, 0;
     font-size: 16px;
     color: #fff;
     margin-bottom: 30px;
@@ -86,7 +138,6 @@ option{
     position: relative;
     left: 0;
     top: -60px;
-    padding: 10px 0;
     font-size: 16px;
     color:#fff;
     pointer-events: none;
@@ -100,11 +151,19 @@ option{
     color: var(--mid_color);
     font-size: 12px;
 }
+
+.message{
+    text-align: center;
+    justify-content: center;
+    color: red;
+    font-size: 14px;
+}
 #create{
-    margin: 2px;
+    margin: 20px 2px 2px 2px;
     width: 150px;
     text-align: center;
     color: var(--light_color);
+    background: transparent;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -123,7 +182,7 @@ option{
 .button_form{
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 0;
 }
 #login{
     font-size: 14px;
@@ -141,27 +200,73 @@ option{
 #login a:hover{
     text-decoration: underline;
 }
+
+
+/* <-----------FOOTER------------> */
+footer{
+    background-color: rgba(68, 26, 91, 0.5);
+    padding: 25px;
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+}
+.contact{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.contact label{
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+@media (max-width: 640px){
+    .navbar-right{
+        float: left;
+        padding-left: 4%;
+    }
+    .navbar-logo{
+        font-size: 30px;
+    }
+    .navbar-right a {
+        padding: 2vw;
+    }
+}
+
+@media (max-width: 370px){
+    .navbar-logo{
+        font-size: 7vw;
+        padding: 2%;
+    }
+    .navbar-right a {
+        padding: 2vw;
+    }
+}
+
+
 /* Custom Scrollbar */
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 1em;
 
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: var(--light_color);
     border-radius: 5px;
-    box-shadow:inset 0 0 5px var(--dark_color);
+    box-shadow: inset 0 0 5px var(--dark_color);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: var(--mid_color);
     border-radius: 5px;
     outline: 1px solid var(--dark_color);
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background-color: var(--dark_color);
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(38, 16, 35);
     width: 15px;
     border-radius: 3px;
 }
