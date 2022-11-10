@@ -155,8 +155,8 @@ option{
 .message{
     text-align: center;
     justify-content: center;
-    color: red;
-    font-size: 14px;
+    color: var(--light_color);
+    font-size: 20px;
 }
 #create{
     margin: 20px 2px 2px 2px;
