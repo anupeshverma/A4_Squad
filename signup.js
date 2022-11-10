@@ -15,3 +15,19 @@ create.addEventListener('click', function () {
     if (password1 != password2)
         alert('Passwords do not match');
 })
+
+function choose_profile() {
+    let book_for = document.getElementById("book_for_").value;
+
+    let msg = document.querySelector(".message");
+
+    if (book_for == "human") {
+        msg.textContent = "Humans are welcome";
+
+
+    }
+    else if (book_for == "monster")
+        {
+            msg.textContent = "Monsters are welcome";
+        }
+}
