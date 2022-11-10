@@ -26,9 +26,10 @@
             <h2>SignUp</h2>
             <div class="profile">
                 <h3>SignUp As:</h3>
-                <select name="moster/human">
+                <select id="book_for_" name="monster/human" required onchange="choose_profile()">
+                    <option value="" selected hidden>Choose...</option>
                     <option value="human">Human</option>
-                    <option value="Monster">Monster</option>
+                    <option value="monster">Monster</option>
                 </select>
             </div>
             <form>
