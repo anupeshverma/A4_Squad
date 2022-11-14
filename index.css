@@ -176,7 +176,7 @@ figure img {
 }
 
 
-/* The colour of the indicators */
+/* The color of the indicators */
 
 .blog .carousel-indicators li {
     background: #708198;
@@ -315,7 +315,7 @@ figure img {
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     overflow-y: inherit;
 }
 
@@ -421,6 +421,18 @@ footer {
     .navbar-right a {
         padding: 2vw;
     }
+
+    .people{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .people_right{
+        flex-direction: column-reverse;
+    }
+    .quote_left .quote_right{
+        margin: 5px;
+    }
 }
 
 @media (max-width: 370px) {
@@ -440,6 +452,12 @@ footer {
     #video-bg {
         height: 160px;
     }
+
+    .people{
+        flex-direction: column;
+        width: 105%;
+    }
+    
 }
 
 /* Custom Scrollbar */
