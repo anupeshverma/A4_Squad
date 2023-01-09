@@ -1,6 +1,6 @@
 # HOTEL TRANSYLVANIA
 
-## Team Name : A4_Squad
+# **Google Cloud API: Dialogflow CX** integrated for real-time chatbot
 
 ## Problem Statement: 
 “Count Dracula, the owner of the Hotel Transylvania, wants to cele-
