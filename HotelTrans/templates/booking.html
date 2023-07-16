@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking </title>
+    <link rel="icon" type="image/x-icon" href="/static/Icons/Hotelicon.png" />
+    <link rel="stylesheet" href="/static/css/booking.css" />
+  </head>
+
+  <body>
+    <nav class="navigation">
+      <a href="/" class="navbar-logo">Hotel Transylvania</a>
+      <a class="login-btn">Welcome !</a>
+    </nav>
+    <main>
+      <div class="login_box">
+        <h2>BOOK ROOM NOW</h2>
+        <div class="profile">
+          <h3>Book For:</h3>
+          <select name="moster/human">
+            <option value="human">Human</option>
+            <option value="Monster">Monster</option>
+          </select>
+        </div>
+        <form>
+          <div class="user_box">
+            <input id="user_name" type="text" name="username" required />
+            <label>Enter Your Name</label>
+          </div>
+          <div class="user_box">
+            <input id="user_email" type="email text" name="username" required />
+            <label>Enter E-mail Address</label>
+          </div>
+          <div class="user_box">
+            <input
+              id="user_arrival"
+              type="text"
+              onfocus="(this.type='date')"
+              onblur="if(!this.value)this.type='text'"
+              name="arrival_date"
+              required
+            />
+            <label>Enter Arrival Date</label>
+          </div>
+
+          <div class="user_box">
+            <input
+              id="user_room"
+              type="number"
+              min="1"
+              name="no._of_rooms"
+              required
+              id="password"
+            />
+            <label>No. of Rooms</label>
+          </div>
+
+          <div id="user_people" class="user_box">
+            <input
+              type="number"
+              min="1"
+              name="password"
+              required
+              id="confirm_password"
+            />
+            <label>No. Of People</label>
+          </div>
+
+          <div class="user_box">
+            <select class="no._rooms" required>
+              <option value="" selected hidden>Room Type</option>
+              <option>Single Bed</option>
+              <option>Double Bed</option>
+              <option>Triple Bed</option>
+            </select>
+          </div>
+
+          <div class="message"></div>
+          <div class="button_form">
+            <button id="create">BOOK</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="copyright">Copyright &copy 2022 Hotel Transylvania</div>
+      <div class="contact">
+        <div class="contact-box">
+          <img
+            src="https://img.icons8.com/ios-filled/512/company.png"
+            alt="building"
+            width="60px"
+          /><br />
+          <label>Location</label><br />
+          Lorem, ipsum dolor.
+        </div>
+        <div class="contact-box">
+          <img
+            src="https://img.icons8.com/ios-filled/512/ringing-phone.png"
+            alt="phone"
+            width="60px"
+          /><br />
+          <label>Phone</label><br />
+          +91 123456789
+        </div>
+        <div class="contact-box">
+          <img
+            src="https://img.icons8.com/ios-glyphs/512/mail-account.png"
+            alt="e-mail"
+            width="60px"
+          /><br />
+          <label>E-Mail</label><br />
+          fakemail@ghost.com
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="static/scripts/booking.js"></script>
+  </body>
+</html>
